@@ -1,7 +1,7 @@
 import dash
 from dash import html
 import dash_bootstrap_components as dbc
-from dash.dependencies import Input, Output, State
+from dash.dependencies import Input, Output
 import sqlite3
 
 
