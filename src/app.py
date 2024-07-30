@@ -18,26 +18,26 @@ app.layout=html.Div([
 
 
 
-@app.callback(
-    Output('text','children'),
-    Input('db-button','n_clicks')
-)
-def click(n_clicks):
-    if n_clicks is not None and n_clicks > 0:
+# @app.callback(
+#     Output('text','children'),
+#     Input('db-button','n_clicks')
+# )
+# def click(n_clicks):
+#     if n_clicks is not None and n_clicks > 0:
         
 
-        conn = sqlite3.connect('db_test.db')
-        cursor = conn.cursor()
+#         conn = sqlite3.connect('db_test.db')
+#         cursor = conn.cursor()
           
-        insert_query = "INSERT INTO table_test (col1, col2) VALUES (?, ?)"
-        cursor.execute(insert_query, ('val1', 'val2')) #entry_time instead?
-        conn.commit()
-        cursor.close()
-        conn.close()
+#         insert_query = "INSERT INTO table_test (col1, col2) VALUES (?, ?)"
+#         cursor.execute(insert_query, ('val1', 'val2')) #entry_time instead?
+#         conn.commit()
+#         cursor.close()
+#         conn.close()
 
-        return "button was clicked"
-    else:
-        return 'not clicked'
+#         return "button was clicked"
+#     else:
+#         return 'not clicked'
 
 print('ran')
 
