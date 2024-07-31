@@ -14,4 +14,4 @@ db_title='db_test.db'
 table_name='table_test'
 
 
-initialize_database(db_title,table_name, 'col1','col2')
+initialize_database(db_title,table_name, 'name','col2')
