@@ -25,7 +25,7 @@ app.layout = html.Div(
 )
 def callbk(n_clicks, input_val):
     if n_clicks > 0 and input_val:
-        conn = sqlite3.connect('db_test.db')
+        conn = sqlite3.connect('src/db_test.db')
         cursor = conn.cursor()
           
         insert_query = "INSERT INTO table_test (name, col2) VALUES (?, ?)"
