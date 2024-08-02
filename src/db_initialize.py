@@ -10,7 +10,7 @@ def initialize_database(db_title,table_name,*args):
     cursor.close()
     conn.close()
 
-db_title='db_test.db'
+db_title='src/db_test.db'
 table_name='table_test'
 
 
