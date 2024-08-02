@@ -25,16 +25,16 @@ app.layout = html.Div(
 )
 def callbk(n_clicks, input_val):
     if n_clicks > 0 and input_val:
-        # conn = sqlite3.connect('src/db_test.db')
-        # cursor = conn.cursor()
+        conn = sqlite3.connect('src/db_test.db')
+        cursor = conn.cursor()
           
-        # insert_query = "INSERT INTO table_test (name, col2) VALUES (?, ?)"
-        # cursor.execute(insert_query, (input_val, 'extra_col'))
-        # conn.commit()
-        # cursor.close(
+        insert_query = "INSERT INTO table_test (name, col2) VALUES (?, ?)"
+        cursor.execute(insert_query, (input_val, 'extra_col'))
+        conn.commit()
+        cursor.close(
         
-        # )
-        # conn.close()
+        )
+        conn.close()
 
         return f'{input_val} value has been entered'
     return ''
